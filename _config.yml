@@ -22,12 +22,12 @@ repository               : "Junjie-Su/junjie-su.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/JunjieSu.jpg"
+  avatar           : "JunjieSu.jpg"
   name             : "Junjie Su"
   pronouns         : # example: "she/her"  
-  bio              : "An undergrad from BUPT"
+  bio              : "An undergraduate from BUPT"
   location         : "Beijing, China"
-  employer         : "Beijing University of Posts and Telecommunications"
+  employer         : "BUPT"
   uri              : # URL
   email            : "sujunjie@bupt.edu.cn"
 
