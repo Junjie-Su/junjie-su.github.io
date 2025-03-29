@@ -65,8 +65,8 @@ Student Work
 
 Scholarships & Awards
 =======
-- **2024** Won **National Bronze Award** *in the China International College Students’ Innovation and Entrepreneurship Competition (2024)*  
-- **2024** Won **Second Prize** *in the 9th National Cryptography Technology Competition*  
-- **2024** Awarded **Second-Class Scholarship** *at BUPT*  
-- **2024** Recognized as **Active Contributor to Arts and Sports** *at BUPT*  
-- **2023** Awarded **Third-Class Scholarship** *at BUPT*  
+- **2024** Won **National Bronze Award** in the China International College Students’ Innovation and Entrepreneurship Competition (2024)  
+- **2024** Won **Second Prize** in the 9th National Cryptography Technology Competition  
+- **2024** Awarded **Second-Class Scholarship** at BUPT  
+- **2024** Recognized as **Active Contributor to Arts and Sports** at BUPT  
+- **2023** Awarded **Third-Class Scholarship** at BUPT  
