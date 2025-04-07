@@ -43,10 +43,10 @@ Projects
 ======
 **AI Table Tennis — Full-Process Intelligent Tournament System**  
 *Entrepreneurial Project | National Level*  
-*Software Engineer* — *Sept 2023 – Oct 2024*  
-- Leveraged professional knowledge of table tennis competitions and extensive event-organizing experience to deeply contribute to the platform’s business logic design, resolving issues such as unattractive interfaces and the lack of intelligent event management in existing platforms.  
-- Developed front-end pages using the WeChat Mini Program technology stack and Vant2 components, creating several highly reusable component templates that enhanced team development efficiency.  
-- Built the back-end with SpringBoot2 and PostgreSQL13, implementing legality checks for competition information and enabling multimedia data storage and retrieval on a SaaS platform.
+*Software Engineer* — *Sept 2023 – Present*  
+- Responsible for backend and frontend development, submitting a total of 126 code commits; implemented legality checks for competition information on the backend and utilized the Qiniu Cloud SaaS platform for multimedia data storage and retrieval; created multiple highly reusable components on the frontend, improving the team's development efficiency.  
+- Recently focused on skeletal recognition and object detection algorithms, plus backend service setup.  
+- Deeply involved in the platform's business logic design, addressing issues with the existing platform's unattractive interface and lack of intelligent event management.
 
 Work Experience
 =======
