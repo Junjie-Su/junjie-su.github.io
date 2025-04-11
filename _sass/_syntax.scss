@@ -9,8 +9,9 @@ div.highlighter-rouge, figure.highlight {
   border: 1px solid var(--global-border-color);
   border-radius: $border-radius;
   background-color: var(--global-code-background-color);
-  box-shadow: $box-shadow;
-  font-size: $type-size-3; // 增大字体大小，假设$type-size-3比$type-size-4大
+  // box-shadow: $box-shadow;
+  font-size: $type-size-4;
+  font-weight: 300;
 
   &:before {
     position: absolute;
@@ -29,14 +30,12 @@ div.highlighter-rouge, figure.highlight {
   .highlight {
     margin: 0;
     font-family: $monospace;
-    font-size: $type-size-5; // 增大字体大小，假设$type-size-5比$type-size-6大
-    line-height: 1.4; // 调整行间距，使其更紧凑
+    font-size: $type-size-6;
+    line-height: 1.4;
   }
 }
 
-.highlight table td { 
-  padding: 2px; // 减少单元格内的padding，去除每行代码中间的间隔
-}
+.highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 
 
