@@ -1,11 +1,12 @@
 ---
 title: 'Installing Ubuntu 20.04 for Development and Deep Learning'
 date: 2025-05-14
-permalink: /posts/2025/05/server-room-sysadmin-adventure/
+permalink: /posts/2025/05/installing-ubuntu/
 tags:
-  - experience
+  - environment setup
   - ubuntu
-  - tips
+  - docker
+  - deep learning
 ---
 
 This guide walks you through installing Ubuntu Server 20.04 on a physical machine with a GPU, setting up a basic development environment with Docker and Docker Compose, and configuring CUDA for deep learning. These steps generally apply to other installation methods and Ubuntu versions (18.04-24.04), so **you can follow this whether you're installing the Desktop or Server version, on a physical machine or a virtual machine.** If you're using a VM, you can skip the USB drive creation.
