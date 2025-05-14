@@ -67,19 +67,19 @@ Configuration varies by system and `netplan` version. Here's a sample:
 
 ```yaml
 network:
-    version: 2
-    renderer: networkd
-    ethernets:
-        eth0:
-            dhcp4: no
-            addresses: [192.168.1.100/24]
-            routes:
-                - to: default # Default route for external network
-                  via: 192.168.1.1 # Gateway IP
-                - to: 10.0.0.0/8 # Specific network for internal machines
-                  via: 192.168.1.2 # Gateway IP
-            nameservers:
-                addresses: [8.8.8.8, 8.8.4.4]
+  version: 2
+  renderer: networkd
+  ethernets:
+    eth0:
+      dhcp4: no
+      addresses: [192.168.1.100/24]
+      routes:
+        - to: default # Default route for external network
+          via: 192.168.1.1 # Gateway IP
+        - to: 10.0.0.0/8 # Specific network for internal machines
+          via: 192.168.1.2 # Gateway IP
+      nameservers:
+        addresses: [8.8.8.8, 8.8.4.4]
 ```
 
 Apply the configuration:
