@@ -396,5 +396,3 @@ If `True` is printed, your PyTorch and CUDA environment is configured correctly.
 ## 6\. Conclusion
 
 By following these steps, you've successfully installed Ubuntu Server 20.04 on a GPU-equipped machine and set up the necessary environment for backend development and deep learning. Each step, from creating the bootable drive to configuring the software, is crucial. This guide should help you overcome common installation and configuration challenges, regardless of your Ubuntu version or whether you're using a physical or virtual machine. We hope this helps you quickly establish your ideal development and deep learning environment.
-
-```
