@@ -6,10 +6,9 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I'm an undergraduate student majoring in Cyberspace Security (Experimental Class) at
-[Beijing University of Posts and Telecommunications (BUPT)](https://www.bupt.edu.cn/).
-My research interests lie in **AI Agent**, **Trustworthy AI**, and **Adversarial Machine Learning**.
-I have been working under the supervision of [Prof. Jie Hao](https://scss.bupt.edu.cn/info/1063/3808.htm) in the [National Engineering Research Center of Disaster Backup and Recovery](http://www.zaibei.org.cn/).
+I am an undergraduate student in Cyberspace Security (Experimental Class) at Beijing University of Posts and Telecommunications (BUPT), with research interests in **AI Agents**, **Trustworthy AI**, and **Adversarial Machine Learning**.
+Previously, I conducted research under [Prof. Jie Hao](https://scss.bupt.edu.cn/info/1063/3808.htm) at the [National Engineering Research Center of Disaster Backup and Recovery](http://www.zaibei.org.cn/).
+Currently, I am working with [Prof. Jun Liu](https://teacher.bupt.edu.cn/liujun/zh_CN/index/64453/list/), focusing on AI Agents for the next four years.
 
 Publications
 ============
