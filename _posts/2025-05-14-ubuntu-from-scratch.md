@@ -7,63 +7,70 @@ tags:
   - ubuntu
   - docker
   - deep learning
+  - sysadmin
 ---
 
-This guide walks you through installing Ubuntu Server 20.04 on a physical machine with a GPU, setting up a basic development environment with Docker and Docker Compose, and configuring CUDA for deep learning. These steps generally apply to other installation methods and Ubuntu versions (18.04-24.04), so **you can follow this whether you're installing the Desktop or Server version, on a physical machine or a virtual machine.** If you're using a VM, you can skip the USB drive creation.
+This guide provides a comprehensive walkthrough for installing Ubuntu Server 20.04 on a GPU-equipped physical machine and configuring a production-ready environment for backend development and deep learning. It was born out of a hands-on experience reinstalling a lab server from scratch — a task that turned a routine afternoon into a two-day troubleshooting marathon, complete with forgotten BIOS keys, mysterious GPU display failures, and a dead Ethernet port that silently derailed the entire setup process. The lessons learned from that ordeal are distilled here as practical tips throughout the guide.
 
-## 1. Create a Bootable USB Drive
+The topics covered include bootable USB creation, system installation, network configuration, Docker and Docker Compose setup, NVIDIA driver and CUDA installation, and Python environment management with Miniconda.
 
-First, you'll need a USB drive (at least 4GB, 16GB recommended) to burn the Ubuntu image onto.
+While this guide targets Ubuntu Server 20.04, the procedures are broadly applicable to other Ubuntu versions (18.04 through 24.04) and installation methods. **Whether you are deploying the Desktop or Server edition on physical hardware or a virtual machine, this guide serves as a reliable reference.** Virtual machine users may skip the bootable USB creation step and proceed directly with their hypervisor's built-in installation tools.
 
-> **Important:** Back up everything on the USB drive as it will be formatted.
+## 1. Creating a Bootable USB Drive
 
-Next, download the Ubuntu 20.04 Server image from:
+Prepare a USB drive with a minimum capacity of 4 GB (16 GB or greater is recommended) for writing the Ubuntu installation image.
 
-- [ubuntu.com](https://www.releases.ubuntu.com/focal/): Official site, usually the most stable and fastest (may require a proxy).
-- [Tsinghua Mirror](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/): A mirror site that can be used without a proxy, but might be slower.
+> **Important:** All existing data on the USB drive will be erased during the imaging process. Ensure that any critical files are backed up beforehand.
 
-Then, download a tool to create the bootable USB drive:
+Download the Ubuntu 20.04 Server ISO from one of the following sources:
 
-- **Windows:** [Rufus](https://rufus.ie/en/) (refer to [this guide](https://blog.csdn.net/qq_21386397/article/details/129894803) - ensure you select the correct Ubuntu version).
-- **macOS:** [balenaEtcher](/) (user-friendly, just follow the on-screen instructions).
+- [Ubuntu Official Releases](https://www.releases.ubuntu.com/focal/): The canonical source; generally the most stable and fastest option (may require a proxy in certain regions).
+- [Tsinghua University Mirror](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/): A domestic mirror suitable for users in China who do not have proxy access.
 
-Once done, you should have a bootable USB drive.
+Next, select a USB imaging tool appropriate for your operating system:
 
-## 2. Install Ubuntu from USB
+- **Windows:** [Rufus](https://rufus.ie/en/) — Refer to [this guide](https://blog.csdn.net/qq_21386397/article/details/129894803) for detailed instructions. Ensure that you select the correct Ubuntu version during configuration.
+- **macOS:** [balenaEtcher](https://www.balena.io/etcher/) — A straightforward tool that requires minimal configuration; simply follow the on-screen prompts.
 
-1.  Plug the USB drive into your server, ensuring it's connected to the motherboard.
-2.  Start the server and press **F12** (or **F2**, **ESC**, check the boot screen) repeatedly to enter the BIOS.
-3.  In the BIOS, change the boot order to prioritize the USB drive, or directly select the USB drive as the boot device.
-4.  Save the changes and exit the BIOS. The Ubuntu installation process should begin.
+Upon completion, you should have a bootable USB drive ready for installation.
 
-### 2.1 Installation Details
+## 2. Installing Ubuntu from the USB Drive
 
-Follow the steps in [this video](https://www.bilibili.com/video/BV19u411K7Ts/) for a visual guide. Customize settings like disk partitioning as needed.
+1. Insert the USB drive into the target machine, ensuring that the port is connected directly to the motherboard.
+2. Power on the machine and repeatedly press **F12** (or **F2** / **ESC**, depending on the motherboard) to enter the BIOS setup utility. There is no universal key — consult the boot screen or your motherboard's documentation. When in doubt, try all common options.
+3. In the BIOS, adjust the boot order to prioritize the USB drive, or select it directly as the boot device.
+4. Save the configuration and exit. The Ubuntu installer should launch automatically.
 
-**Tips:**
+### 2.1 Installation Notes
 
--   **Internal Network:** If installing on an internal network requiring a specific server address, ensure you have the static IP, subnet mask, and gateway IP.
--   **APT Sources and Updates:** **Avoid configuring APT sources or updating system packages during the initial installation.** Stick with the default sources and skip the update step. Changing sources or updating with network issues can lead to installation failures and the need to reinstall.
+For a step-by-step visual walkthrough, refer to [this installation video](https://www.bilibili.com/video/BV19u411K7Ts/). Adjust settings such as disk partitioning according to your specific hardware configuration.
 
-## 3. Configure System Network
+**Key recommendations:**
 
-This is crucial for remote server access on physical machines. VMs are simpler to configure via their tools, but understanding these concepts is important for later package installations.
+- **Internal network environments:** If your deployment requires a static IP address, confirm the assigned IP, subnet mask, and gateway address prior to installation.
+- **APT source configuration:** **Do not modify APT sources or perform system updates during the initial installation.** Retain the default package sources and skip the update step entirely. Modifying sources or attempting updates with unreliable network connectivity can cause installation failures, potentially necessitating a full reinstall.
 
-### 3.1 Configure System Gateway
+## 3. Configuring the System Network
 
-We recommend using `netplan`, which comes pre-installed on Ubuntu Server. The configuration file for Ubuntu Server 22.04 is typically at `/etc/netplan/00-installer-config.yaml`.
+Proper network configuration is essential for remote access to physical servers. While virtual machines offer simpler networking through their management tools, understanding these concepts remains important for subsequent package management and dependency installation.
+
+> **Lesson learned:** Before debugging software-level network issues, always verify the physical layer first — check that the Ethernet cable is functional and plugged into a live port. A dead port or faulty cable can produce symptoms that mimic software misconfigurations, leading to hours of unnecessary reinstallation and troubleshooting.
+
+### 3.1 Configuring the System Gateway
+
+The recommended approach is to use `netplan`, which is included by default in Ubuntu Server installations. The configuration file is typically located at:
 
 ```bash
 sudo vim /etc/netplan/00-installer-config.yaml
-````
+```
 
-Changes here are permanent and applied on system boot. For temporary configuration, use:
+Settings defined here are persistent and applied automatically at boot. For temporary route configuration, use:
 
 ```bash
 sudo route add -net <target_network> netmask <subnet_mask> gw <gateway_IP>
 ```
 
-Configuration varies by system and `netplan` version. Here's a sample:
+The exact configuration syntax may vary depending on the system and `netplan` version. The following is a representative example:
 
 ```yaml
 network:
@@ -74,82 +81,82 @@ network:
       dhcp4: no
       addresses: [192.168.1.100/24]
       routes:
-        - to: default # Default route for external network
-          via: 192.168.1.1 # Gateway IP
-        - to: 10.0.0.0/8 # Specific network for internal machines
-          via: 192.168.1.2 # Gateway IP
+        - to: default          # Default route for external network access
+          via: 192.168.1.1     # Gateway IP
+        - to: 10.0.0.0/8      # Route for internal network machines
+          via: 192.168.1.2     # Gateway IP
       nameservers:
         addresses: [8.8.8.8, 8.8.4.4]
 ```
 
-Apply the configuration:
+Apply the configuration using:
 
 ```bash
-sudo netplan try  # Test configuration (reverts on no confirmation)
+sudo netplan try    # Test configuration (automatically reverts if not confirmed)
 # Or apply directly:
 sudo netplan apply
 ```
 
-Verify the configuration:
+Verify the applied routes:
 
 ```bash
 ip route show
 ```
 
-> **Tip:** If configuring the network remotely via SSH, use `sudo netplan try` to test your changes. If you don't confirm within the timeout, the configuration will revert, preventing you from losing connection due to errors.
+> **Tip:** When configuring the network remotely via SSH, always use `sudo netplan try` rather than `sudo netplan apply`. This command tests the configuration and automatically reverts to the previous settings if you do not confirm within the timeout period, preventing accidental loss of connectivity.
 
-## 3.2 Configure Basic Tools
+## 4. Configuring Essential Tools
 
-Once networking is set up, you can SSH into your server from your local machine:
+Once networking is operational, you can access the server remotely from your local machine:
 
 ```bash
 ssh <username>@<hostname_or_IP>
 ```
 
-### 3.2.1 APT
+### 4.1 APT Package Manager
 
-First, configure APT sources, especially if you're in China. Edit the sources list:
+For users in China, configuring a domestic APT mirror is strongly recommended. Edit the sources list:
 
 ```bash
 sudo vim /etc/apt/sources.list
 ```
 
-Replace the contents with a mirror like Aliyun:
+Replace the contents with an appropriate mirror. The following example uses the Alibaba Cloud mirror:
 
 ```
-deb [http://mirrors.aliyun.com/ubuntu/](http://mirrors.aliyun.com/ubuntu/) focal main restricted universe multiverse
-deb [http://mirrors.aliyun.com/ubuntu/](http://mirrors.aliyun.com/ubuntu/) focal-security main restricted universe multiverse
-deb [http://mirrors.aliyun.com/ubuntu/](http://mirrors.aliyun.com/ubuntu/) focal-updates main restricted universe multiverse
-deb [http://mirrors.aliyun.com/ubuntu/](http://mirrors.aliyun.com/ubuntu/) focal-backports main restricted universe multiverse
-deb [http://mirrors.aliyun.com/ubuntu/](http://mirrors.aliyun.com/ubuntu/) focal-proposed main restricted universe multiverse
-deb [arch=amd64] [http://mirrors.aliyun.com/docker-ce/linux/ubuntu](http://mirrors.aliyun.com/docker-ce/linux/ubuntu) focal stable
-# deb-src [arch=amd64] [http://mirrors.aliyun.com/docker-ce/linux/ubuntu](http://mirrors.aliyun.com/docker-ce/linux/ubuntu) focal stable
+deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
+deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu focal stable
+# deb-src [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu focal stable
 ```
 
-Save and update the APT sources and upgrade existing packages:
+Save the file, then update the package index and upgrade existing packages:
 
 ```bash
 sudo apt update && sudo apt upgrade
 ```
 
-This might take some time. Then, install essential tools:
+This process may take several minutes. Once complete, install the essential build tools:
 
 ```bash
-sudo apt install build-essential  # Includes GCC and other common tools
-sudo apt install docker docker-compose  # For backend deployment
+sudo apt install build-essential    # Includes GCC and other common compilation tools
+sudo apt install docker docker-compose    # Required for backend deployment
 ```
 
-### 3.2.2 Docker
+### 4.2 Docker
 
-Docker is a vital tool for production environments. Here's a more detailed setup:
+Docker is an indispensable tool in modern production environments. This section provides a detailed walkthrough of its installation and configuration.
 
-> **Reference:** This [article](https://blog.csdn.net/justlpf/article/details/132982953) provides a good overview of Docker and Docker Compose installation.
+> **Reference:** [This article](https://blog.csdn.net/justlpf/article/details/132982953) offers a comprehensive overview of the Docker and Docker Compose installation process.
 
-#### 3.2.2.1 Docker Installation
+#### 4.2.1 Docker Engine Installation
 
-While you can install Docker with `apt`, this method forgoes easier mirror configuration. We recommend this approach:
+While Docker can be installed directly via `apt`, this approach complicates mirror configuration. The following method is recommended instead.
 
-Install Docker dependencies:
+Install the required dependencies:
 
 ```bash
 sudo apt-get install ca-certificates curl gnupg lsb-release
@@ -158,28 +165,28 @@ sudo apt-get install ca-certificates curl gnupg lsb-release
 Add Docker's official GPG key:
 
 ```bash
-curl -fsSL [http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg](http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg) | sudo apt-key add -
+curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
 ```
 
-Configure the Docker mirror (Aliyun):
+Add the Docker repository (using the Alibaba Cloud mirror):
 
 ```bash
-sudo add-apt-repository "deb [arch=amd64] [http://mirrors.aliyun.com/docker-ce/linux/ubuntu](http://mirrors.aliyun.com/docker-ce/linux/ubuntu) $(lsb_release -cs) stable"
+sudo add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
 ```
 
-Now, install Docker CE:
+Install Docker CE:
 
 ```bash
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
-Docker is now installed. To avoid using `sudo` with Docker commands, add your user to the `docker` group:
+To avoid requiring `sudo` for every Docker command, add your user to the `docker` group:
 
 ```bash
 sudo usermod -aG docker $USER
 ```
 
-You might need to log out and back in for this to take effect. Verify the installation:
+A logout and login may be required for the group membership to take effect. Verify the installation:
 
 ```bash
 sudo systemctl start docker
@@ -187,47 +194,46 @@ sudo systemctl status docker
 sudo docker run hello-world
 ```
 
-If your network is working, the test image should run successfully. Enable Docker to start on boot:
+If the network is properly configured, the test container should execute successfully. Enable Docker to start automatically at boot:
 
 ```bash
 sudo systemctl enable docker
 ```
 
-Optional tools:
+Optional additional packages:
 
 ```bash
 sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
 ```
 
-Restart Docker after installing new tools or changing configurations:
+After installing new tools or modifying Docker's configuration, restart the Docker service:
 
 ```bash
 sudo systemctl restart docker
 ```
 
-To change Docker settings like mirrors, edit `/etc/docker/daemon.json` (requires `sudo`). After editing, reload the daemon and restart Docker:
+To modify Docker daemon settings (such as registry mirrors), edit the file `/etc/docker/daemon.json` (requires root privileges). After making changes, reload the daemon configuration and restart the service:
 
 ```bash
 sudo systemctl reload docker
 sudo systemctl restart docker
 ```
 
-#### 3.2.2.2 Docker Compose Installation
+#### 4.2.2 Docker Compose Installation
 
-Install Docker Compose:
+Download and install Docker Compose:
 
 ```bash
-# GitHub: [https://github.com/docker/compose/releases/tag/v2.20.2](https://github.com/docker/compose/releases/tag/v2.20.2)
-# China Mirror: [https://gitee.com/smilezgy/compose/releases/tag/v2.20.2](https://gitee.com/smilezgy/compose/releases/tag/v2.20.2)
+# GitHub: https://github.com/docker/compose/releases/tag/v2.20.2
+# China mirror: https://gitee.com/smilezgy/compose/releases/tag/v2.20.2
 sudo curl -SL \
-[https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-linux-x86_64](https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-linux-x86_64) \
--o /usr/local/bin/docker-compose
+  https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-linux-x86_64 \
+  -o /usr/local/bin/docker-compose
 
-# Or download manually, upload to the server, and run:
-# In the same directory as docker-compose-linux-x86_64
+# Alternatively, download manually, upload to the server, then run:
 sudo cp docker-compose-linux-x86_64 /usr/local/bin/docker-compose
 
-# Make it executable
+# Grant execute permissions
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
@@ -237,111 +243,118 @@ Verify the installation:
 docker-compose --version
 ```
 
-Docker and Docker Compose are now set up. If you encounter download timeouts, configure Docker mirrors in `/etc/docker/daemon.json`:
+If you encounter download timeouts when pulling images, configure Docker registry mirrors in `/etc/docker/daemon.json`:
 
 ```json
 {
     "registry-mirrors": [
-        "[https://registry.docker-cn.com](https://registry.docker-cn.com)",
-        "[https://mirror.ccs.tencentyun.com](https://mirror.ccs.tencentyun.com)",
-        "[https://docker.mirrors.ustc.edu.cn](https://docker.mirrors.ustc.edu.cn)",
-        "[https://docker.m.daocloud.io](https://docker.m.daocloud.io)",
-        "[https://docker.imgdb.de](https://docker.imgdb.de)",
-        "[https://docker-0.unsee.tech](https://docker-0.unsee.tech)",
-        "[https://docker.hlmirror.com](https://docker.hlmirror.com)",
-        "[https://docker.1ms.run](https://docker.1ms.run)",
-        "[https://func.ink](https://func.ink)",
-        "[https://lispy.org](https://lispy.org)",
-        "[https://docker.xiaogenban1993.com](https://docker.xiaogenban1993.com)"
+        "https://registry.docker-cn.com",
+        "https://mirror.ccs.tencentyun.com",
+        "https://docker.mirrors.ustc.edu.cn",
+        "https://docker.m.daocloud.io",
+        "https://docker.imgdb.de",
+        "https://docker-0.unsee.tech",
+        "https://docker.hlmirror.com",
+        "https://docker.1ms.run",
+        "https://func.ink",
+        "https://lispy.org",
+        "https://docker.xiaogenban1993.com"
     ]
 }
 ```
 
-Test a few mirrors to see which work best for you.
+It is advisable to test each mirror individually and retain only those that provide reliable connectivity.
 
-## 4\. Install NVIDIA Driver and CUDA
+## 5. NVIDIA Driver and CUDA Installation
 
-### 4.1 NVIDIA Driver
+### 5.1 NVIDIA Driver
 
-For a 1080Ti (example GPU):
+This example uses the GTX 1080 Ti. The procedure is the same for other NVIDIA GPUs.
 
-1.  Go to the [NVIDIA Drivers website](https://www.google.com/search?q=https://www.nvidia.com/geforce/drivers/).
-2.  Select your GPU model and operating system, then search for the latest driver.
-3.  Download the `.run` file.
-4.  Make it executable and run it:
-
-<!-- end list -->
+1. Navigate to the [NVIDIA Driver Downloads](https://www.nvidia.com/Download/index.aspx) page.
+2. Select your GPU model, operating system, and platform, then search for the latest available driver.
+3. Download the resulting `.run` file.
+4. Make it executable and run the installer:
 
 ```bash
 chmod +x NVIDIA-Linux-x86_64-*.run
 sudo ./NVIDIA-Linux-x86_64-*.run
 ```
 
-Installation takes time, and a reboot is usually required. **Before rebooting, double-check your `netplan` configuration to avoid losing connection.** Verify the installation:
+The installation process takes several minutes, and a system reboot is typically required. **Before rebooting, verify your `netplan` configuration to ensure you will not lose remote connectivity.**
+
+Verify the installation:
 
 ```bash
 nvidia-smi
 ```
 
-**Tip:** This command shows GPU status. For monitoring during deep learning:
+**Tip:** This command displays the current GPU status. For real-time monitoring during deep learning workloads:
 
 ```bash
 watch -n 1 nvidia-smi
 ```
 
-This updates the GPU status every second, useful for tracking utilization.
+This refreshes the GPU status every second, providing continuous visibility into compute core and memory utilization.
 
-### 4.2 CUDA Installation
+### 5.2 CUDA Toolkit Installation
 
-For CUDA 12.8 (example version): The latest version might not support older GPUs. **Check your GPU compatibility before proceeding.**
+This example uses CUDA 12.8. Note that NVIDIA has announced that CUDA 12.9 and later versions will discontinue support for certain legacy GPU architectures, including the GTX and TITAN series. **Verify your GPU's compatibility before selecting a CUDA version.**
 
-1.  Search online for "cuda [your version]" (e.g., "cuda 12.8").
-2.  Go to the NVIDIA CUDA Toolkit [download archive](https://developer.nvidia.com/cuda-12-8-1-download-archive).
-3.  Select your OS, architecture, distribution, version, and installer type (`deb (local)` recommended).
-4.  Follow the instructions provided on the NVIDIA website. For the example CUDA 12.8 and Ubuntu 20.04:
-
-<!-- end list -->
+1. Search for the desired CUDA version (e.g., "cuda 12.8") and navigate to the [NVIDIA CUDA Toolkit Download Archive](https://developer.nvidia.com/cuda-12-8-1-download-archive).
+2. Select your operating system, architecture, distribution, version, and installer type (`deb (local)` is recommended).
+3. Follow the instructions provided on the NVIDIA website. For CUDA 12.8 on Ubuntu 20.04:
 
 ```bash
-wget [https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin](https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin)
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
 sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
-wget [https://developer.download.nvidia.com/compute/cuda/12.8.1/local_installers/cuda-repo-ubuntu2004-12-8-local_12.8.1-570.124.06-1_amd64.deb](https://developer.download.nvidia.com/compute/cuda/12.8.1/local_installers/cuda-repo-ubuntu2004-12-8-local_12.8.1-570.124.06-1_amd64.deb)
+wget https://developer.download.nvidia.com/compute/cuda/12.8.1/local_installers/cuda-repo-ubuntu2004-12-8-local_12.8.1-570.124.06-1_amd64.deb
 sudo dpkg -i cuda-repo-ubuntu2004-12-8-local_12.8.1-570.124.06-1_amd64.deb
 sudo cp /var/cuda-repo-ubuntu2004-12-8-local/cuda-*-keyring.gpg /usr/share/keyrings/
 sudo apt-get update
 sudo apt-get -y install cuda-toolkit-12-8
 ```
 
-The installation will take a while.
+The installation process may take a considerable amount of time.
 
-## 5\. Deep Learning Environment
+### 5.3 Enabling GPU Access in Docker Containers
 
-### 5.1 Miniconda
+To allow Docker containers to utilize the host GPU via CUDA, you need to install the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html). Once installed, configure GPU access in your `docker-compose.yml` as follows:
 
-1.  Go to the [Miniconda installation page](https://www.google.com/search?q=https://www.anaconda.com/docs/getting-started/miniconda/install%23linux) and get the latest Linux x64 installation instructions. As of May 14, 2025:
+```yaml
+services:
+  container-name:    # Replace with your container name
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: "nvidia"
+              count: "all"
+              capabilities: ["gpu"]
+```
 
-<!-- end list -->
+## 6. Deep Learning Environment
+
+### 6.1 Miniconda
+
+Install Miniconda by following the instructions on the [official installation page](https://www.anaconda.com/docs/getting-started/miniconda/install#linux). The following commands are for Linux x86_64 systems (as of May 2025):
 
 ```bash
 mkdir -p ~/miniconda3
-wget [https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh](https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh) -O ~/miniconda3/miniconda.sh
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm ~/miniconda3/miniconda.sh
 ```
 
-2.  The installer will ask if you want to initialize Conda. We recommend saying `yes` for automatic `~/.bashrc` configuration.
+It is recommended to consult the official website for the latest stable release. During installation, when prompted to initialize Conda, select `yes` to enable automatic `~/.bashrc` configuration.
 
-3.  After installation, your terminal prompt should show `(base)`:
-
-<!-- end list -->
+Upon successful installation, your terminal prompt should display the `(base)` environment indicator:
 
 ```bash
 (base) user@hostname:~$
 ```
 
-4.  Configure pip mirrors (Aliyun example):
-
-<!-- end list -->
+Configure pip to use a domestic mirror (Alibaba Cloud example):
 
 ```bash
 mkdir ~/.pip
@@ -353,23 +366,19 @@ Add the following content:
 
 ```text
 [global]
-index-url = [https://mirrors.aliyun.com/pypi/simple/](https://mirrors.aliyun.com/pypi/simple/)
+index-url = https://mirrors.aliyun.com/pypi/simple/
 
 [install]
 trusted-host = mirrors.aliyun.com
 ```
 
-5.  Create a virtual environment (e.g., for PyTorch):
-
-<!-- end list -->
+Create a virtual environment (e.g., for PyTorch development):
 
 ```bash
 conda create -n torch python=3.9 -y
 ```
 
-6.  Activate the environment and install PyTorch and other dependencies:
-
-<!-- end list -->
+Activate the environment and install the required packages:
 
 ```bash
 conda activate torch
@@ -377,9 +386,7 @@ pip install --upgrade pip
 pip install torch torchvision torchaudio jupyter
 ```
 
-7.  Verify the PyTorch and CUDA setup:
-
-<!-- end list -->
+Verify that PyTorch can access the GPU through CUDA:
 
 ```bash
 (torch) user@hostname:~$ python
@@ -391,8 +398,12 @@ Type "help", "copyright", "credits" or "license" for more information.
 True
 ```
 
-If `True` is printed, your PyTorch and CUDA environment is configured correctly.
+If the output is `True`, both PyTorch and CUDA have been configured correctly.
 
-## 6\. Conclusion
+## 7. Conclusion
 
-By following these steps, you've successfully installed Ubuntu Server 20.04 on a GPU-equipped machine and set up the necessary environment for backend development and deep learning. Each step, from creating the bootable drive to configuring the software, is crucial. This guide should help you overcome common installation and configuration challenges, regardless of your Ubuntu version or whether you're using a physical or virtual machine. We hope this helps you quickly establish your ideal development and deep learning environment.
+This guide has walked through the complete process of installing Ubuntu Server 20.04 on a GPU-equipped physical machine and establishing a production-ready environment for both backend development and deep learning. Each stage — from bootable drive creation and system installation to network configuration, Docker setup, NVIDIA driver and CUDA installation, and Python environment management — plays a critical role in building a stable and functional development platform.
+
+The procedures and principles outlined here are broadly transferable to other Ubuntu versions, virtual machine deployments, and Desktop edition installations. By following these steps methodically, most common installation and configuration issues can be resolved efficiently.
+
+A final note: system administration demands not only technical proficiency but also patience and a methodical approach to troubleshooting. When things go wrong — and they will — resist the urge to jump into complex debugging. Start with the basics: check physical connections, verify network reachability, and confirm BIOS settings before diving deeper. The simplest oversights often prove to be the most time-consuming to diagnose.
