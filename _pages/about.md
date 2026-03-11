@@ -8,12 +8,12 @@ redirect_from:
 ---
 I am an incoming M.S. student in Intelligent Science and Technology at [Beijing University of Posts and Telecommunications (BUPT)](https://www.bupt.edu.cn/), where I also received my B.E. in Cyberspace Security (Experimental Class). My research interests include **AI Agents**, **Trustworthy AI** and **System Architecture**.
 
-Starting Fall 2026, I will join [Prof. Jun Liu](https://teacher.bupt.edu.cn/liujun/zh_CN/index/64453/list/)'s group. Previously, I worked with [Prof. Jie Hao](https://scss.bupt.edu.cn/info/1063/3808.htm) on Audio Security and Adversarial Machine Learning. Currently, I am at [MiroFish](https://www.mirofish.com) (Shanda Group) as an AI Intern & Founding Member.
+Starting Fall 2026, I will join [Prof. Jun Liu](https://teacher.bupt.edu.cn/liujun/zh_CN/index/64453/list/)'s group. Previously, I worked with [Prof. Jie Hao](https://scss.bupt.edu.cn/info/1063/3808.htm) on Audio Security and Adversarial Machine Learning. Currently, I am at [MiroFish](https://www.mirofish.ai) (Shanda Group) as an AI Intern & Founding Member.
 
 News
 ====
 
-- **01/2026**: Joined [MiroFish](https://www.mirofish.com) (Shanda Group) as an AI Intern & Founding Member.
+- **01/2026**: Joined [MiroFish](https://www.mirofish.ai) (Shanda Group) as an AI Intern & Founding Member.
 - **11/2025**: Won First Prize at the [Global Campus AI Algorithm Elite Competition](https://www.aicomp.cn/notice/notice-3/2846.html).
 - **10/2025**: We released a paper on adversarial attacks against polyphonic sound event detection systems on [arXiv](https://arxiv.org/abs/2510.02158).
 - **09/2025**: Admitted to BUPT M.S. program in Intelligent Science and Technology.
