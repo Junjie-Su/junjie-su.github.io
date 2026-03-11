@@ -6,10 +6,9 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am an incoming M.S. student in Intelligent Science and Technology at Beijing University of Posts and Telecommunications (BUPT), where I also received my B.E. in Cyberspace Security (Experimental Class). My research interests include **AI Agents**, **Trustworthy AI** and **System Architecture**.
-Currently, I am working at [MiroFish](https://www.mirofish.com) (Shanda Group) as an AI Intern & Founding Member, focusing on SaaS architecture design and Agent development.
-Starting Fall 2026, I will join [Prof. Jun Liu](https://teacher.bupt.edu.cn/liujun/zh_CN/index/64453/list/)'s group, focusing on AI Agents, Information Networks and Intelligent Perception.
-Previously, I conducted research on Audio Security and Adversarial Machine Learning under [Prof. Jie Hao](https://scss.bupt.edu.cn/info/1063/3808.htm) at the [National Engineering Research Center of Disaster Backup and Recovery](http://www.zaibei.org.cn/).
+I am an incoming M.S. student in Intelligent Science and Technology at [Beijing University of Posts and Telecommunications (BUPT)](https://www.bupt.edu.cn/), where I also received my B.E. in Cyberspace Security (Experimental Class). My research interests include **AI Agents**, **Trustworthy AI** and **System Architecture**.
+
+Starting Fall 2026, I will join [Prof. Jun Liu](https://teacher.bupt.edu.cn/liujun/zh_CN/index/64453/list/)'s group. Previously, I worked with [Prof. Jie Hao](https://scss.bupt.edu.cn/info/1063/3808.htm) on Audio Security and Adversarial Machine Learning. Currently, I am at [MiroFish](https://www.mirofish.com) (Shanda Group) as an AI Intern & Founding Member.
 
 News
 ====
