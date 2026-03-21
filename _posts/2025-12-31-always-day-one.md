@@ -32,11 +32,11 @@ Our office was in Zijin Digital Park in Beijing—an older, leased building. But
 
 ## Into the Core
 
-After the warm-up, I was handed work with real business impact: implementing auto-scaling for traffic failover scenarios. This capability had never been integrated into the platform before. Previously, capacity scaling during failover relied entirely on SREs coordinating resources manually—slow, error-prone, and plagued by stale information. Our goal was to let the system automatically infer capacity requirements from traffic changes and execute scaling across data centers with a single click.
+After the warm-up, I was handed work with real business impact: implementing auto-scaling for routine traffic migration scenarios—shifting traffic between data centers for cost optimization or infrastructure transitions, rather than emergency disaster recovery. This capability had never been integrated into the platform before. Previously, capacity scaling during these migrations relied entirely on SREs coordinating resources manually—slow, error-prone, and plagued by stale information. Our goal was to let the system automatically infer capacity requirements from traffic changes and execute scaling across data centers with a single click.
 
-My understanding at the time, however, was far less clear than that summary suggests. I thought the job was straightforward: call the underlying component's scaling API, pass in the parameters, trigger it, done. That mental model captured the core idea but missed the complexity of failover scenarios entirely. Throughout Q3, my work on Redis auto-scaling went through multiple rounds of redesign and refactoring. I barely finished the feature before the National Day holiday in October, and didn't even have time to test it properly before leaving for the break.
+My understanding at the time, however, was far less clear than that summary suggests. I thought the job was straightforward: call the underlying component's scaling API, pass in the parameters, trigger it, done. That mental model captured the core idea but missed the complexity of traffic migration scenarios entirely. Throughout Q3, my work on Redis auto-scaling went through multiple rounds of redesign and refactoring. I barely finished the feature before the National Day holiday in October, and didn't even have time to test it properly before leaving for the break.
 
-But that period also held unexpected beauty. Around the holiday, I applied to work from the Shenzhen office and got my manager's approval. The Shenzhen campus was in Jinghu Tower, right next to Shenzhen Bay Park. Working in my hometown felt surreal—my home was impossibly close to the office, and the daily commute became something I looked forward to.
+But that period also held unexpected beauty. Around the holiday, I applied to work from the Shenzhen office and got my leader's approval. The Shenzhen campus was in Jinghu Tower, right next to Shenzhen Bay Park. Working in my hometown felt surreal—my home was impossibly close to the office, and the daily commute became something I looked forward to.
 
 ![The view at breakfast](/images/posts/always-day-one/shenzhen-breakfast.png)
 
@@ -56,7 +56,7 @@ Those days planted a seed in my mind: someday, if the opportunity arises, I want
 
 Returning to Beijing after the holiday, I was met with an unexpected change: Tushen had transferred to Seed, ByteDance's AI infrastructure division. Just before the break, we'd sat down for a one-on-one about my career plans, and he'd given me thoughtful advice. I respected his decision, but the reality was immediate—I needed to adapt to a completely new mentor.
 
-My new mentor, Haobin, was a seasoned engineer with exacting standards for code quality. After taking over the failover project, he brought a wave of new ideas. What began as a routine refactoring discussion escalated, under his near-perfectionist demands, into a full platform rewrite. Qi, Xin, and I—the three frontline developers—spent over a month iterating on the design before arriving at that conclusion.
+My new mentor, Haobin, was a seasoned engineer with exacting standards for code quality. After taking over the traffic migration project, he brought a wave of new ideas. What began as a routine refactoring discussion escalated, under his near-perfectionist demands, into a full platform rewrite. Qi, Xin, and I—the three frontline developers—spent over a month iterating on the design before arriving at that conclusion.
 
 This meant my entire Q3's work would be discarded. And it wasn't just me—Xin's substantial contributions from the first half of the year would need to be redone as well. The frustration was real. Three months of effort, scrapped before it ever reached production. But once the initial sting faded, we recognized that the earlier approach had been too idealistic, and that the pursuit of perfection had actually slowed us down. Once we accepted that, the team recalibrated quickly and rallied to meet the new timeline.
 
@@ -72,7 +72,7 @@ The turning point came during a debate about data processing. Haobin proposed re
 
 After that, something shifted between us. Code reviews moved faster. He stopped micromanaging every detail and began engaging me as a peer—discussing trade-offs, accepting alternative technical judgments. I went from passively receiving feedback to actively shaping technical decisions. That trust was earned, and the process of earning it was the most valuable thing I took from the internship.
 
-After weeks of intense work—at one point, taking a taxi home past midnight for over a week straight—I completed everything I'd been tasked with: auto-scaling support for both TCE and Redis, the two core components in the failover pipeline.
+After weeks of intense work—at one point, taking a taxi home past midnight for over a week straight—I completed everything I'd been tasked with: auto-scaling support for both TCE and Redis, the two core components in the traffic migration pipeline.
 
 ## The Final Days
 
@@ -80,13 +80,15 @@ I'd set my end date before I even started: December 25th, Christmas Day. By Dece
 
 The day before I left, I gave a tech talk at the company on the history of large language models—something I'd spent two months preparing. Afterward, a colleague joked that they'd never seen anything so thorough. It was my parting gift to the team.
 
-On my last morning, everything proceeded as usual. Stand-up, syncing progress, tying up loose ends. Haobin thanked me after the meeting and said he was satisfied with my work. A colleague asked why I wasn't converting to full-time, saying I'd outperformed most new graduates. My manager added me on WeChat and told me the door was always open—after graduation, skip Beijing and come straight to Shenzhen. “Assuming I'm still here,” he added with a grin.
+On my last morning, everything proceeded as usual. Stand-up, syncing progress, tying up loose ends. Haobin thanked me after the meeting and said he was satisfied with my work. A colleague asked why I wasn't converting to full-time, saying I'd outperformed most new graduates. My leader added me on WeChat and told me the door was always open—after graduation, skip Beijing and come straight to Shenzhen. “Assuming I'm still here,” he added with a grin.
 
 Everyone respected my decision. There was no grand farewell, no ceremony. Things simply wound down. It wasn't until I handed my badge to the front desk that the six months finally felt real—and over.
 
 ## Always Day One
 
 Before walking out of Zijin Digital Park, I stopped to take a photo of the wall bearing the ByteDance logo. I might never set foot in this office again, but I wanted something to remember it by.
+
+![The ByteDance logo at Zijin Digital Park](/images/posts/always-day-one/zijin-farewell.png)
 
 My Lark account would be deactivated that evening, but before it was, one last message came through—an invitation to a team dinner. Apparently, the team had held one the week before I joined and was now holding another right after I left. My timing, it seemed, was impeccable. They invited me anyway, giving me one brief, “limited-time” return.
 
