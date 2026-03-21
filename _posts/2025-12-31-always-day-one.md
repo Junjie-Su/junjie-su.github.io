@@ -38,17 +38,17 @@ My understanding at the time, however, was far less clear than that summary sugg
 
 But that period also held unexpected beauty. Around the holiday, I applied to work from the Shenzhen office and got my leader's approval. The Shenzhen campus was in Jinghu Tower, right next to Shenzhen Bay Park. Working in my hometown felt surreal—my home was impossibly close to the office, and the daily commute became something I looked forward to.
 
-![The view at breakfast](/images/posts/always-day-one/shenzhen-breakfast.png)
+![The view at breakfast](/images/posts/always-day-one/shenzhen-breakfast.jpg)
 
 The conditions at Jinghu Tower were a world apart from Zijin Digital Park in Beijing—especially the food, which was genuinely moving.
 
-![Lunch](/images/posts/always-day-one/shenzhen-lunch.png)
+![Lunch](/images/posts/always-day-one/shenzhen-lunch.jpg)
 
-![Dinner](/images/posts/always-day-one/shenzhen-dinner.png)
+![Dinner](/images/posts/always-day-one/shenzhen-dinner.jpg)
 
 After dinner, I'd walk along Shenzhen Bay. The sea breeze, the sunset, the city lights in the distance—none of this existed in my Beijing routine.
 
-![An evening walk by Shenzhen Bay](/images/posts/always-day-one/shenzhen-evening-walk.png)
+![An evening walk by Shenzhen Bay](/images/posts/always-day-one/shenzhen-evening-walk.jpg)
 
 Those days planted a seed in my mind: someday, if the opportunity arises, I want to come back to Shenzhen, and back to ByteDance.
 
@@ -88,7 +88,7 @@ Everyone respected my decision. There was no grand farewell, no ceremony. Things
 
 Before walking out of Zijin Digital Park, I stopped to take a photo of the wall bearing the ByteDance logo. I might never set foot in this office again, but I wanted something to remember it by.
 
-![The ByteDance logo at Zijin Digital Park](/images/posts/always-day-one/zijin-farewell.png)
+![The ByteDance logo at Zijin Digital Park](/images/posts/always-day-one/zijin-farewell.jpg)
 
 My Lark account would be deactivated that evening, but before it was, one last message came through—an invitation to a team dinner. Apparently, the team had held one the week before I joined and was now holding another right after I left. My timing, it seemed, was impeccable. They invited me anyway, giving me one brief, “limited-time” return.
 
