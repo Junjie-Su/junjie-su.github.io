@@ -22,7 +22,7 @@ repository: "Junjie-Su/junjie-su.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar: "avatar.jpg"
+  avatar: "site/avatar.jpg"
   name: "Junjie Su"
   pronouns: "he/his"
   bio: "An undergraduate from BUPT"

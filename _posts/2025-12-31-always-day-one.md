@@ -38,17 +38,17 @@ My understanding at the time, however, was far less clear than that summary sugg
 
 But that period also held unexpected beauty. Around the holiday, I applied to work from the Shenzhen office and got my manager's approval. The Shenzhen campus was in Jinghu Tower, right next to Shenzhen Bay Park. Working in my hometown felt surreal—my home was impossibly close to the office, and the daily commute became something I looked forward to.
 
-![The view at breakfast](/images/shenzhen-breakfast.png)
+![The view at breakfast](/images/posts/always-day-one/shenzhen-breakfast.png)
 
 The conditions at Jinghu Tower were a world apart from Zijin Digital Park in Beijing—especially the food, which was genuinely moving.
 
-![Lunch](/images/shenzhen-lunch.png)
+![Lunch](/images/posts/always-day-one/shenzhen-lunch.png)
 
-![Dinner](/images/shenzhen-dinner.png)
+![Dinner](/images/posts/always-day-one/shenzhen-dinner.png)
 
 After dinner, I'd walk along Shenzhen Bay. The sea breeze, the sunset, the city lights in the distance—none of this existed in my Beijing routine.
 
-![An evening walk by Shenzhen Bay](/images/shenzhen-evening-walk.png)
+![An evening walk by Shenzhen Bay](/images/posts/always-day-one/shenzhen-evening-walk.png)
 
 Those days planted a seed in my mind: someday, if the opportunity arises, I want to come back to Shenzhen, and back to ByteDance.
 
