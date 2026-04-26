@@ -14,7 +14,7 @@ News
 ====
 
 - **01/2026**: Joined [MiroFish](https://www.mirofish.ai) (Shanda Group) as an AI Intern & Founding Member.
-- **11/2025**: Won First Prize at the [Global Campus AI Algorithm Elite Competition](https://www.aicomp.cn/notice/notice-3/2846.html).
+- **11/2025**: Won Second Prize at the [Global Campus AI Algorithm Elite Competition](https://www.aicomp.cn/notice/notice-3/2846.html).
 - **10/2025**: We released a paper on adversarial attacks against polyphonic sound event detection systems on [arXiv](https://arxiv.org/abs/2510.02158).
 - **09/2025**: Admitted to BUPT M.S. program in Intelligent Science and Technology.
 - **09/2025**: Our paper on guardrails for audio-language models was accepted to NeurIPS 2025.
@@ -81,7 +81,7 @@ Student Work
 Scholarships & Awards
 =====================
 
-- **2025** [Global Campus AI Algorithm Elite Competition](https://www.aicomp.cn/notice/notice-3/2846.html) — First Prize
+- **2025** [Global Campus AI Algorithm Elite Competition](https://www.aicomp.cn/notice/notice-3/2846.html) — Second Prize
 - **2025** [National College Students Information Security Contest](http://www.ciscn.cn/index.php/announcement/view/392) — First Prize
 - **2024** [China International College Students' Innovation Competition](https://cy.ncss.cn/information/2c958332919840310196181825280051) — Bronze Award
 - **2024** [National Cryptography Technology Competition](https://www.cacrnet.org.cn/site/content/1564.html) — Second Prize
