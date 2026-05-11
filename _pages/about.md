@@ -13,6 +13,7 @@ Starting Fall 2026, I will join [Prof. Jun Liu](https://teacher.bupt.edu.cn/liuj
 News
 ====
 
+- **04/2026**: Awarded Outstanding Graduate of Beijing.
 - **01/2026**: Joined [MiroFish](https://www.mirofish.ai) (Shanda Group) as an AI Intern & Founding Member.
 - **11/2025**: Won Second Prize at the [Global Campus AI Algorithm Elite Competition](https://www.aicomp.cn/notice/notice-3/2846.html).
 - **10/2025**: We released a paper on adversarial attacks against polyphonic sound event detection systems on [arXiv](https://arxiv.org/abs/2510.02158).
