@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am an incoming M.S. student in Artificial Intelligence at [Beijing University of Posts and Telecommunications (BUPT)](https://www.bupt.edu.cn/), where I also received my B.E. in Cyberspace Security (Experimental Class). My research interests include **AI Infra**, **AI Agents** and **Trustworthy AI**. I also write on my [tech blog](https://momoyeyu.github.io).
+I am an incoming M.S. student in Artificial Intelligence at [Beijing University of Posts and Telecommunications (BUPT)](https://www.bupt.edu.cn/), where I also received my B.E. in Cyberspace Security (Experimental Class). My research interests include **AI Infra**, **AI Agents** and **Trustworthy AI**. I also write on my <a href="https://momoyeyu.github.io" target="_blank" rel="noopener noreferrer">tech blog</a>.
 
 Starting Fall 2026, I will join [Prof. Jun Liu](https://teacher.bupt.edu.cn/liujun/zh_CN/index/64453/list/)'s group. Previously, I worked with [Prof. Jie Hao](https://scss.bupt.edu.cn/info/1063/3808.htm) on Audio Security and Adversarial Machine Learning. Currently, I am at [MiroFish](https://www.mirofish.ai) (Shanda Group) as an AI Intern & Founding Member.
 
