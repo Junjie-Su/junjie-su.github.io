@@ -8,7 +8,7 @@ tags:
   - career
 ---
 
-In 2012, Jeff Bezos wrote in his annual letter to Amazon shareholders: “Day 2 is stasis, followed by irrelevance, followed by excruciating painful decline, followed by death.” He used “Day One” to describe a state of perpetual beginning—curious, disruptive, restless. Years later, ByteDance adopted this philosophy as the first principle of its corporate culture: Always Day One.
+In 2016, Jeff Bezos wrote in his annual letter to Amazon shareholders: “Day 2 is stasis. Followed by irrelevance. Followed by excruciating, painful decline. Followed by death. And that is why it is always Day 1.” He used “Day One” to describe a state of perpetual beginning—curious, disruptive, restless. Years later, ByteDance adopted this philosophy as the first principle of its corporate culture: Always Day One.
 
 Before I joined the company, I saw those words on the office wall and thought nothing of them—just another corporate slogan. Six months later, as I handed in my badge and walked out of Zijin Digital Park for the last time, sunlight falling on the wall with the ByteDance logo, I realized those words had acquired weight. “Always Day One” doesn't mean starting from scratch forever. It means carrying the mindset of someone who is starting from scratch—humble, curious, unafraid to tear things down and rebuild.
 
