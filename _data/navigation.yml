@@ -20,8 +20,8 @@ main:
 #  - title: "Portfolio"
 #    url: /portfolio/
 #
-  - title: "Blog Posts"
-    url: /year-archive/
+  - title: "Blog"
+    url: https://momoyeyu.github.io
     
   - title: "CV"
     url: /files/CV-苏俊杰.pdf

@@ -7,7 +7,7 @@ tags:
   - thinking
 ---
 
-Today, I’ve decided to start writing blogs again—or perhaps to start properly for the first time. Three years ago, as a freshman at Beijing University of Posts and Telecommunications, I kept a site at [momoyeyu.github.io](https://momoyeyu.github.io). But those posts were closer to study notes than real writing. So here, on March 31, 2025, I’m starting over.
+Today, I’ve decided to start writing—or rather, a different kind of writing. Since my freshman year at Beijing University of Posts and Telecommunications, I’ve kept a Chinese tech blog at [momoyeyu.github.io](https://momoyeyu.github.io). But those posts are closer to technical notes than real reflection. What I need now is a space to think clearly. So here, on March 31, 2025, I’m beginning.
 
 ## Why Start Blogging
 
