@@ -122,6 +122,7 @@
       "@context": "https://schema.org",
       "@type": "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
       "name": "{{ site.social.name | default: site.name }}",
+      "alternateName": "苏俊杰",
       "url": {{ seo_url | jsonify }},
       "image": "{{ seo_url }}/images/{{ site.og_image | default: site.author.avatar }}",
       "jobTitle": "M.S. Student in Artificial Intelligence",
