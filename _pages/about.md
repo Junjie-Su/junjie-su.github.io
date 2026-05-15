@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: "Junjie Su"
+description: "Junjie Su — M.S. student at BUPT researching AI Infra, AI Agents, and Trustworthy AI. Publications at NeurIPS, USENIX Security, ICME."
 author_profile: true
 redirect_from: 
   - /about/
