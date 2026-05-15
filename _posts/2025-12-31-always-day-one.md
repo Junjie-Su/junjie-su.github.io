@@ -2,6 +2,7 @@
 title: 'Always Day One'
 date: 2025-12-31
 permalink: /posts/2025/12/always-day-one/
+description: "Lessons from six months as a ByteDance intern on TikTok's Servarch team — embracing the Day One mindset of humility, curiosity, and rebuilding."
 tags:
   - life
   - thinking

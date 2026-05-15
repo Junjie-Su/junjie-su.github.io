@@ -72,7 +72,8 @@ author:
   weibo: # Username
   wikipedia: # Username
   xing: # Username
-  youtube: "Momoyeyu"
+  youtube: # Username
+  bilibili: "https://space.bilibili.com/171878754"
   zhihu: # Username
 
 # Publication Category - The following the list of publication categories and their headings
@@ -134,13 +135,17 @@ facebook:
   username:
   app_id:
   publisher:
-og_image: # Open Graph/Twitter default site image
+og_image: "site/avatar.jpg" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type: # Person or Organization (defaults to Person)
-  name: # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type: Person
+  name: "Junjie Su"
+  links:
+    - "https://github.com/Momoyeyu"
+    - "https://scholar.google.com/citations?user=0c27Ns4AAAAJ&hl"
+    - "https://orcid.org/0009-0007-4262-6131"
+    - "https://space.bilibili.com/171878754"
 
 # Analytics
 analytics:
