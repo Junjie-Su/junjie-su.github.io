@@ -9,13 +9,13 @@ redirect_from:
 ---
 I am an incoming M.S. student in Artificial Intelligence at [Beijing University of Posts and Telecommunications (BUPT)](https://www.bupt.edu.cn/), where I also received my B.E. in Cyberspace Security (Experimental Class). My research interests include **AI Infra**, **AI Agents** and **Trustworthy AI**. I also write on my <a href="https://momoyeyu.github.io" target="_blank" rel="noopener noreferrer">tech blog</a>.
 
-Starting Fall 2026, I will join [Prof. Jun Liu](https://teacher.bupt.edu.cn/liujun/zh_CN/index/64453/list/)'s group. Previously, I worked with [Prof. Jie Hao](https://scss.bupt.edu.cn/info/1063/3808.htm) on Audio Security and Adversarial Machine Learning. Currently, I am at [MiroFish](https://www.mirofish.ai) (Shanda Group) as an AI Intern & Founding Member.
+Starting Fall 2026, I will join [Prof. Jun Liu](https://teacher.bupt.edu.cn/liujun/zh_CN/index/64453/list/)'s group. Previously, I worked with [Prof. Jie Hao](https://scss.bupt.edu.cn/info/1063/3808.htm) on Audio Security and Adversarial Machine Learning. From January to May 2026, I worked at [MiroFish](https://www.mirofish.ai) as an AI Intern & Founding Member.
 
 News
 ====
 
 - **04/2026**: Awarded Outstanding Graduate of Beijing.
-- **01/2026**: Joined [MiroFish](https://www.mirofish.ai) (Shanda Group) as an AI Intern & Founding Member.
+- **01/2026**: Joined [MiroFish](https://www.mirofish.ai) as an AI Intern & Founding Member.
 - **11/2025**: Won Second Prize at the [Global Campus AI Algorithm Elite Competition](https://www.aicomp.cn/notice/notice-3/2846.html).
 - **10/2025**: We released a paper on adversarial attacks against polyphonic sound event detection systems on [arXiv](https://arxiv.org/abs/2510.02158).
 - **09/2025**: Admitted to BUPT M.S. program in Intelligent Science and Technology.
@@ -64,8 +64,8 @@ Publications
 Work Experience
 ===============
 
-**Shanda Group — MiroFish (AI Startup)**
-*AI Intern & Founding Member & Team Lead* — *Jan 2026 – Present*
+**MiroFish (AI Startup)**
+*AI Intern & Founding Member* — *Jan 2026 – May 2026*
 
 **ByteDance**
 *Backend R&D Intern — TikTok-Servarch-Cost&Performance* — *Jul 2025 – Dec 2025*
