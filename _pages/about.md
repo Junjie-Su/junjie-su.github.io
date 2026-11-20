@@ -9,7 +9,7 @@ redirect_from:
 ---
 I am an M.S. student in Intelligent Science and Technology at [Beijing University of Posts and Telecommunications (BUPT)](https://www.bupt.edu.cn/), where I also received my B.E. in Cyberspace Security (Experimental Class). My current work focuses on **Agent Harness**, **AI Infra**, and **Post-training**, with a particular emphasis on **AI cost and performance**. I also write on my <a href="https://momoyeyu.github.io" target="_blank" rel="noopener noreferrer">tech blog</a>.
 
-I joined [Prof. Jun Liu](https://teacher.bupt.edu.cn/liujun/zh_CN/index/64453/list/)'s group in Fall 2026. I am currently an R&D Intern at Kimi, working on Kimi Work Desktop and its core. Previously, I worked with [Prof. Jie Hao](https://scss.bupt.edu.cn/info/1063/3808.htm) on Audio Security and Adversarial Machine Learning, and at [MiroFish](https://www.mirofish.ai) as an AI Intern & Head of Engineering.
+I joined [Prof. Jun Liu](https://teacher.bupt.edu.cn/liujun/zh_CN/index/64453/list/)'s group in Fall 2026. I am currently an R&D Intern at [Kimi](https://www.kimi.com/), working on Kimi Work Desktop and its core. Previously, I worked with [Prof. Jie Hao](https://scss.bupt.edu.cn/info/1063/3808.htm) on Audio Security and Adversarial Machine Learning, at [MiroFish](https://www.mirofish.ai) as an AI Intern & Head of Engineering, and at [ByteDance](https://www.bytedance.com/en/) as a Backend R&D Intern.
 
 News
 ====
