@@ -64,28 +64,30 @@ Selected Papers
 Work Experience
 ===============
 
-**Kimi**
+- **Kimi**
 *R&D Intern — Kimi Work Desktop – Android* — *Nov 2026 – Present*
 
-**MiroFish (AI Startup)**
+- **MiroFish (AI Startup)**
 *AI Intern & Head of Engineering* — *Jan 2026 – May 2026*
 
-**ByteDance**
+- **ByteDance**
 *Backend R&D Intern — TikTok-Servarch-Cost&Performance* — *Jul 2025 – Dec 2025*
 
-**Antiy Technology Group Co., Ltd.**
+- **Antiy Technology Group Co., Ltd.**
 *Security Development Intern — Technical Committee* — *Jul 2024 – Aug 2024*
 
 Open Source
 ===========
 
-**[Archify](https://github.com/tt-a1i/archify)**
+- **[Archify](https://github.com/tt-a1i/archify)**
 *Maintainer* — *Nov 2026 – Present*
+
+- **[momo](https://momoyeyu.github.io/momo/)**
 
 Student Work
 ============
 
-**BUPT Table Tennis Association**
+- **BUPT Table Tennis Association**
 *President* — *Sept 2023 – Jul 2024*
 *Core Member* — *Sept 2022 – Jul 2023*
 
