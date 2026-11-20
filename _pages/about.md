@@ -1,21 +1,27 @@
 ---
 permalink: /
 title: "Junjie Su"
-description: "Junjie Su (苏俊杰) — M.S. student at BUPT researching AI Infra, AI Agents, and Trustworthy AI. Publications at NeurIPS, USENIX Security, ICME."
+description: "Junjie Su (苏俊杰) — M.S. student at BUPT working on Agent Harness, AI Infra, and Post-training. Publications at NeurIPS, USENIX Security, ICME."
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-I am an incoming M.S. student in Artificial Intelligence at [Beijing University of Posts and Telecommunications (BUPT)](https://www.bupt.edu.cn/), where I also received my B.E. in Cyberspace Security (Experimental Class). My research interests include **AI Infra**, **AI Agents** and **Trustworthy AI**. I also write on my <a href="https://momoyeyu.github.io" target="_blank" rel="noopener noreferrer">tech blog</a>.
+I am an M.S. student in Intelligent Science and Technology at [Beijing University of Posts and Telecommunications (BUPT)](https://www.bupt.edu.cn/), where I also received my B.E. in Cyberspace Security (Experimental Class). My current work focuses on **Agent Harness**, **AI Infra**, and **Post-training**, with a particular emphasis on **AI cost and performance**. I also write on my <a href="https://momoyeyu.github.io" target="_blank" rel="noopener noreferrer">tech blog</a>.
 
-Starting Fall 2026, I will join [Prof. Jun Liu](https://teacher.bupt.edu.cn/liujun/zh_CN/index/64453/list/)'s group. Previously, I worked with [Prof. Jie Hao](https://scss.bupt.edu.cn/info/1063/3808.htm) on Audio Security and Adversarial Machine Learning. From January to May 2026, I worked at [MiroFish](https://www.mirofish.ai) as an AI Intern & Founding Member.
+I joined [Prof. Jun Liu](https://teacher.bupt.edu.cn/liujun/zh_CN/index/64453/list/)'s group in Fall 2026. Previously, I worked with [Prof. Jie Hao](https://scss.bupt.edu.cn/info/1063/3808.htm) on Audio Security and Adversarial Machine Learning. From January to May 2026, I worked at [MiroFish](https://www.mirofish.ai) as an AI Intern & Head of Engineering.
 
 News
 ====
 
+- **11/2026**: Joined Kimi as an R&D Intern, working on Kimi Work Desktop and its core.
+- **11/2026**: Became a Maintainer of [Archify](https://github.com/tt-a1i/archify).
+- **10/2026**: [MiroFish](https://github.com/666ghj/MiroFish) surpassed 80k GitHub stars.
+- **09/2026**: Started my M.S. studies at BUPT and joined [Prof. Jun Liu](https://teacher.bupt.edu.cn/liujun/zh_CN/index/64453/list/)'s group.
+- **09/2026**: Started contributing to [Archify](https://github.com/tt-a1i/archify).
+- **09/2026**: [Archify](https://github.com/tt-a1i/archify) surpassed 50k GitHub stars.
 - **04/2026**: Awarded Outstanding Graduate of Beijing.
-- **01/2026**: Joined [MiroFish](https://www.mirofish.ai) as an AI Intern & Founding Member.
+- **01/2026**: Joined [MiroFish](https://www.mirofish.ai) as an AI Intern & Head of Engineering.
 - **11/2025**: Won Second Prize at the [Global Campus AI Algorithm Elite Competition](https://www.aicomp.cn/notice/notice-3/2846.html).
 - **10/2025**: We released a paper on adversarial attacks against polyphonic sound event detection systems on [arXiv](https://arxiv.org/abs/2510.02158).
 - **09/2025**: Admitted to BUPT M.S. program in Intelligent Science and Technology.
@@ -64,14 +70,23 @@ Publications
 Work Experience
 ===============
 
+**Kimi**
+*R&D Intern — Kimi Work Desktop – Android* — *Nov 2026 – Present*
+
 **MiroFish (AI Startup)**
-*AI Intern & Founding Member* — *Jan 2026 – May 2026*
+*AI Intern & Head of Engineering* — *Jan 2026 – May 2026*
 
 **ByteDance**
 *Backend R&D Intern — TikTok-Servarch-Cost&Performance* — *Jul 2025 – Dec 2025*
 
 **Antiy Technology Group Co., Ltd.**
 *Security Development Intern — Technical Committee* — *Jul 2024 – Aug 2024*
+
+Open Source
+===========
+
+**[Archify](https://github.com/tt-a1i/archify)**
+*Maintainer* — *Nov 2026 – Present*
 
 Student Work
 ============
