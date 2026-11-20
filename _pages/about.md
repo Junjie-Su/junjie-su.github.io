@@ -41,19 +41,16 @@ Selected Papers
   </a>
   *Weifei Jin, Yuxin Cao, __Junjie Su__, Minhui Xue, Jie Hao, Ke Xu, Jin Song Dong, Derui Wang.*
   In the Thirty-ninth Annual Conference on Neural Information Processing Systems (NeurIPS), 2025.
-
 - <a href="https://www.usenix.org/conference/usenixsecurity25/presentation/jin-weifei" target="_blank">
   Whispering Under the Eaves: Protecting User Privacy Against Commercial and LLM-powered Automatic Speech Recognition Systems
   </a>
   *Weifei Jin, Yuxin Cao, __Junjie Su__, Derui Wang, Yedi Zhang, Minhui Xue, Jie Hao, Jin Song Dong, Yixian Yang.*
   In the 34th USENIX Security Symposium (USENIX Security), 2025.
-
 - <a href="https://ieeexplore.ieee.org/document/11209891" target="_blank">
   Boosting the Transferability of Audio Adversarial Examples with Acoustic Representation Optimization
   </a>
   *Weifei Jin, __Junjie Su__, Hejia Wang, Yulin Ye, Jie Hao.*
   In IEEE International Conference on Multimedia & Expo (ICME), 2025.
-
 - <a href="https://dl.acm.org/doi/10.1145/3665451.3665532" target="_blank">
   Towards Evaluating the Robustness of Automatic Speech Recognition Systems via Audio Style Transfer
   </a>
@@ -65,13 +62,10 @@ Work Experience
 
 - **Kimi**
 *R&D Intern — Kimi Work Desktop – Android* — *Nov 2026 – Present*
-
 - **MiroFish (AI Startup)**
 *AI Intern & Head of Engineering* — *Jan 2026 – May 2026*
-
 - **ByteDance**
 *Backend R&D Intern — TikTok-Servarch-Cost&Performance* — *Jul 2025 – Dec 2025*
-
 - **Antiy Technology Group Co., Ltd.**
 *Security Development Intern — Technical Committee* — *Jul 2024 – Aug 2024*
 
@@ -80,7 +74,6 @@ Open Source
 
 - **[Archify](https://github.com/tt-a1i/archify)**
 *Maintainer* — *Nov 2026 – Present*
-
 - **[momo](https://momoyeyu.github.io/momo/)**
 
 Student Work
