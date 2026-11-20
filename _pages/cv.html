@@ -1,0 +1,103 @@
+---
+layout: profile
+title: "Curriculum Vitae"
+permalink: /cv/
+description: "Curriculum vitae of Junjie Su — education, research, engineering experience, projects, and awards."
+author_profile: false
+---
+<div class="site-shell site-shell--cv">
+  <header class="page-intro cv-intro">
+    <div>
+      <p class="overline">Curriculum Vitae</p>
+      <h1>Junjie Su<span class="display-dot">.</span></h1>
+      <p>AI / Agent research and engineering. M.S. student at BUPT, currently building Kimi Work.</p>
+    </div>
+    <div class="cv-actions">
+      <a class="button button--primary" href="{{ '/files/CV-苏俊杰.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Download PDF<i class="fa-solid fa-download" aria-hidden="true"></i></a>
+      <button class="text-link text-link--button" type="button" data-print>Print this page<i class="fa-solid fa-print" aria-hidden="true"></i></button>
+    </div>
+  </header>
+
+  <div class="cv-contact-line">
+    <a href="mailto:momoyeyu@outlook.com">momoyeyu@outlook.com</a><span>Beijing, China</span><a href="https://momoyeyu.github.io" target="_blank" rel="noopener noreferrer">Technical blog</a><a href="https://github.com/Momoyeyu" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+
+  <section class="cv-section section-rule" aria-labelledby="cv-education">
+    <h2 id="cv-education">Education</h2>
+    <div class="cv-section__content">
+      <article class="cv-item"><div class="cv-item__header"><div><h3>Beijing University of Posts and Telecommunications</h3><p>M.S. in Intelligent Science and Technology · Recommended admission</p></div><time>Sep 2026 – Jul 2029</time></div></article>
+      <article class="cv-item"><div class="cv-item__header"><div><h3>Beijing University of Posts and Telecommunications</h3><p>B.E. in Cyberspace Security · Experimental Class</p></div><time>Sep 2022 – Jul 2026</time></div></article>
+    </div>
+  </section>
+
+  <section class="cv-section section-rule" aria-labelledby="cv-work">
+    <h2 id="cv-work">Experience</h2>
+    <div class="cv-section__content">
+      <article class="cv-item">
+        <div class="cv-item__header"><div><h3>Kimi</h3><p>R&amp;D Intern · Dev Team, Kimi Work Desktop</p></div><time>Nov 2026 – Present</time></div>
+        <ul class="detail-list"><li>Develop Kimi Work Desktop and its core, taking multi-session collaboration from product design through end-to-end implementation.</li><li>Contribute to the Kimi Work desktop pet, including its permission flow, demo, and on-device verification.</li><li>Explore open-source agent projects and evaluate their integration value for new Kimi Work capabilities.</li></ul>
+      </article>
+      <article class="cv-item">
+        <div class="cv-item__header"><div><h3>MiroFish</h3><p>AI Intern &amp; Head of Engineering</p></div><time>Jan 2026 – May 2026</time></div>
+        <ul class="detail-list"><li>Led architecture, technical selection, and core loop implementation for the MiroFish SaaS service; helped the team ship its MVP in one month.</li><li>Organized weekly engineering meetings and contributed to technical discussions on frontier agent systems.</li><li>Supported fundraising by answering technical questions for investors.</li></ul>
+      </article>
+      <article class="cv-item">
+        <div class="cv-item__header"><div><h3>ByteDance</h3><p>Backend R&amp;D Intern · TikTok, Servarch, Cost &amp; Performance</p></div><time>Jul 2025 – Dec 2025</time></div>
+        <ul class="detail-list"><li>Contributed to TikTok's traffic-switching platform, designing core workflows and implementing the platform in Go with Hertz.</li><li>Built automated scaling for TCE and Redis in traffic-switching scenarios.</li><li>Hosted a technical session on the evolution of language models.</li></ul>
+      </article>
+      <article class="cv-item">
+        <div class="cv-item__header"><div><h3>Antiy Technology Group</h3><p>Security Development Intern · Technical Committee</p></div><time>Jul 2024 – Aug 2024</time></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="cv-section section-rule" aria-labelledby="cv-research">
+    <h2 id="cv-research">Research</h2>
+    <div class="cv-section__content">
+      <article class="cv-item">
+        <div class="cv-item__header"><div><h3>Adversarial Attacks on End-to-End Audio Models</h3><p>Research Assistant · National Engineering Laboratory for Disaster Backup and Recovery, BUPT</p></div><time>Jun 2023 – Jun 2025</time></div>
+        <ul class="detail-list"><li>ALMGuard · NeurIPS 2025.</li><li>Whispering Under the Eaves · USENIX Security 2025.</li><li>Boosting the Transferability of Audio Adversarial Examples · ICME 2025.</li></ul>
+        <a class="text-link text-link--small" href="{{ '/publications/' | relative_url }}">Read selected papers<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </article>
+    </div>
+  </section>
+
+  <section class="cv-section section-rule" aria-labelledby="cv-projects">
+    <h2 id="cv-projects">Projects</h2>
+    <div class="cv-section__content">
+      {% for project in site.data.projects %}
+      <article class="cv-item">
+        <div class="cv-item__header"><div><h3><a href="{{ project.source }}" target="_blank" rel="noopener noreferrer">{{ project.name }}</a></h3><p>{{ project.role }}</p></div><time>{{ project.date }}</time></div>
+        <ul class="detail-list">{% for highlight in project.highlights %}<li>{{ highlight }}</li>{% endfor %}</ul>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="cv-section section-rule" aria-labelledby="cv-skills">
+    <h2 id="cv-skills">Skills</h2>
+    <div class="cv-section__content skill-list">
+      <div><h3>Agent &amp; Harness</h3><p>ReAct, memory, compaction, follow-up mechanisms; open-source harness frameworks; skills and plugin ecosystems.</p></div>
+      <div><h3>LLM &amp; Post-training</h3><p>Transformer, attention, MoE, positional encoding, normalization; SFT, PPO, and RLHF.</p></div>
+      <div><h3>Engineering</h3><p>Python, C++, Go, Java; FastAPI, Hertz, Spring Boot; Redis, PostgreSQL, Kafka.</p></div>
+    </div>
+  </section>
+
+  <section class="cv-section section-rule" aria-labelledby="cv-awards">
+    <h2 id="cv-awards">Selected Awards</h2>
+    <div class="cv-section__content award-list">
+      <div><time>2026</time><p>Outstanding Graduate of Beijing</p></div>
+      <div><time>2025</time><p>Global Campus AI Algorithm Elite Competition · Second Prize</p></div>
+      <div><time>2025</time><p>National College Students Information Security Contest · First Prize</p></div>
+      <div><time>2024</time><p>China International College Students' Innovation Competition · Bronze Award</p></div>
+      <div><time>2024</time><p>National Cryptography Technology Competition · Second Prize</p></div>
+    </div>
+  </section>
+
+  <section class="cv-section section-rule" aria-labelledby="cv-student">
+    <h2 id="cv-student">Student Work</h2>
+    <div class="cv-section__content">
+      <article class="cv-item"><div class="cv-item__header"><div><h3>BUPT Table Tennis Association</h3><p>President · Previously Core Member</p></div><time>Sep 2022 – Jul 2024</time></div><p>Led a core team of more than 20 people, organized association-wide activities, and helped grow the active community to over 900 members.</p></article>
+    </div>
+  </section>
+</div>

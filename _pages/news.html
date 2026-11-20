@@ -1,0 +1,36 @@
+---
+layout: profile
+title: "News & Updates"
+permalink: /news/
+description: "News, milestones, publications, and career updates from Junjie Su."
+author_profile: false
+---
+{% assign year_groups = site.data.news | group_by: "year" %}
+<div class="site-shell">
+  <header class="page-intro page-intro--with-nav">
+    <div>
+      <p class="overline">Timeline</p>
+      <h1>News &amp; Updates<span class="display-dot">.</span></h1>
+      <p>A concise record of research milestones, open source work, and the roles that have shaped my path.</p>
+    </div>
+    <nav class="year-nav" aria-label="Jump to year">
+      {% for group in year_groups %}<a href="#year-{{ group.name }}">{{ group.name }}</a>{% endfor %}
+    </nav>
+  </header>
+
+  <section class="section-rule news-archive" aria-label="News archive">
+    {% for group in year_groups %}
+    <div class="news-year" id="year-{{ group.name }}">
+      <h2>{{ group.name }}</h2>
+      <ol class="news-list">
+        {% for item in group.items %}
+        <li class="news-item">
+          <time>{{ item.date }}</time>
+          <p>{% if item.url %}{{ item.before }} <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.link_text }}</a> {{ item.after }}{% else %}{{ item.text }}{% endif %}</p>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+    {% endfor %}
+  </section>
+</div>

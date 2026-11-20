@@ -1,0 +1,37 @@
+---
+layout: profile
+title: "Open Source Projects"
+permalink: /projects/
+description: "Open source projects maintained and created by Junjie Su, including Archify and momo."
+author_profile: false
+---
+<div class="site-shell">
+  <header class="page-intro">
+    <p class="overline">Open Source</p>
+    <h1>Projects<span class="display-dot">.</span></h1>
+    <p>Engineering is also how I explore ideas. These projects connect agent infrastructure, code understanding, interaction design, and more personal questions about AI companionship.</p>
+    <a class="text-link" href="https://github.com/Momoyeyu" target="_blank" rel="noopener noreferrer">More on GitHub<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+  </header>
+
+  <section class="section-rule project-archive" aria-label="Open source projects">
+    {% for project in site.data.projects %}
+    <article class="project-entry">
+      <header class="project-entry__header">
+        <p class="overline">{{ project.role }} · {{ project.date }}</p>
+        <h2><a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }}</a></h2>
+        <p>{{ project.contributing_since }}</p>
+        <div class="project-entry__links">
+          <a class="text-link text-link--small" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">Project website<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <a class="text-link text-link--small" href="{{ project.source }}" target="_blank" rel="noopener noreferrer">Source code<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </div>
+      </header>
+      <div class="project-entry__body">
+        <p class="project-entry__lead">{{ project.description }}</p>
+        <ul class="detail-list">
+          {% for highlight in project.highlights %}<li>{{ highlight }}</li>{% endfor %}
+        </ul>
+      </div>
+    </article>
+    {% endfor %}
+  </section>
+</div>

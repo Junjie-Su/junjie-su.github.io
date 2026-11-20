@@ -7,6 +7,8 @@ excerpt: "In the 2nd ACM Workshop on Secure and Trustworthy Deep Learning System
 date: 2024-04-01
 venue: "SecTL 2024 (AsiaCCS Workshop)"
 paperurl: "https://dl.acm.org/doi/10.1145/3665451.3665532"
+authors_short: "Weifei Jin, Yuxin Cao, Junjie Su, et al."
+featured_order: 4
 citation: |
   Weifei Jin, Yuxin Cao, Junjie Su, Qi Shen, Kai Ye, Derui Wang, Jie Hao, 
   and Ziyao Liu. 2024. 

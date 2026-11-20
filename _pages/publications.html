@@ -1,52 +1,30 @@
 ---
-layout: archive
-title: "Publications"
+layout: profile
+title: "Selected Papers"
 permalink: /publications/
-author_profile: true
+description: "Selected papers by Junjie Su on audio security, adversarial machine learning, and AI safety."
+author_profile: false
 ---
+{% assign papers = site.publications | sort: "featured_order" %}
+<div class="site-shell">
+  <header class="page-intro">
+    <p class="overline">Research</p>
+    <h1>Selected Papers<span class="display-dot">.</span></h1>
+    <p>Selected work on audio security, adversarial machine learning, and AI safety. My broader research interests now center on Agent Harness, AI Infra, and Post-training.</p>
+    <a class="text-link" href="{{ site.author.googlescholar }}" target="_blank" rel="noopener noreferrer">Google Scholar profile<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+  </header>
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        <ul>  <!-- Start unordered list -->
-        {% assign title_shown = true %}
-      {% endunless %}
-      <li>
-        <strong><a href="{{ post.paperurl }}" target="_blank">{{ post.title }}</a></strong><br>
-        {% if post.citation %}
-          {{ post.citation | split: "." | first }}.<br>  <!-- Extract authors from citation -->
-        {% endif %}
-        {{ post.excerpt }}
-      </li>
+  <section class="section-rule publication-archive" aria-label="Selected publications">
+    {% for post in papers %}
+    <article class="publication-entry">
+      <div class="publication-entry__venue"><span>{{ post.venue }}</span></div>
+      <div class="publication-entry__content">
+        <h2><a href="{{ post.paperurl }}" target="_blank" rel="noopener noreferrer">{{ post.title }}</a></h2>
+        <p class="publication-entry__authors">{{ post.authors_short }}</p>
+        <p class="publication-entry__note">{{ post.excerpt }}</p>
+      </div>
+      <a class="icon-link" href="{{ post.paperurl }}" target="_blank" rel="noopener noreferrer" aria-label="Read {{ post.title }}"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+    </article>
     {% endfor %}
-    </ul>  <!-- End unordered list -->
-  {% endfor %}
-{% else %}
-  <ul>  <!-- Start unordered list -->
-  {% for post in site.publications reversed %}
-    <li>
-      <strong><a href="{{ post.paperurl }}" target="_blank">{{ post.title }}</a></strong><br>
-      {% if post.citation %}
-        {{ post.citation | split: "." | first }}.<br>  <!-- Extract authors from citation -->
-      {% endif %}
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
-  </ul>  <!-- End unordered list -->
-{% endif %}
-
-
-
+  </section>
+</div>

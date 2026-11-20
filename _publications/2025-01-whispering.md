@@ -7,6 +7,8 @@ excerpt: "In the 34th USENIX Security Symposium (USENIX Security), 2025."
 date: 2025-01-01
 venue: "USENIX Security 2025"
 paperurl: "https://www.usenix.org/conference/usenixsecurity25/presentation/jin-weifei"
+authors_short: "Weifei Jin, Yuxin Cao, Junjie Su, et al."
+featured_order: 2
 citation: |
   Weifei Jin, Yuxin Cao, Junjie Su, Derui Wang, Yedi Zhang, Minhui Xue, Jie Hao, Jin Song Dong, 
   and Yixian Yang. 2025. 

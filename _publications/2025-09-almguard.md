@@ -7,6 +7,8 @@ excerpt: "In the Thirty-ninth Annual Conference on Neural Information Processing
 date: 2025-09-01
 venue: "NeurIPS 2025"
 paperurl: "https://openreview.net/forum?id=pCRm6g0RnA"
+authors_short: "Weifei Jin, Yuxin Cao, Junjie Su, et al."
+featured_order: 1
 citation: |
   Weifei Jin, Yuxin Cao, Junjie Su, Minhui Xue, Jie Hao, Ke Xu, Jin Song Dong,
   and Derui Wang. 2025.
