@@ -39,23 +39,19 @@ Selected Papers
 - <a href="https://openreview.net/forum?id=pCRm6g0RnA" target="_blank">
   ALMGuard: Safety Shortcuts and Where to Find Them as Guardrails for Audio–Language Models
   </a>
-  *Weifei Jin, Yuxin Cao, __Junjie Su__, Minhui Xue, Jie Hao, Ke Xu, Jin Song Dong, Derui Wang.*
-  In the Thirty-ninth Annual Conference on Neural Information Processing Systems (NeurIPS), 2025.
+  *Weifei Jin, Yuxin Cao, __Junjie Su__, et al.* **NeurIPS 2025.**
 - <a href="https://www.usenix.org/conference/usenixsecurity25/presentation/jin-weifei" target="_blank">
   Whispering Under the Eaves: Protecting User Privacy Against Commercial and LLM-powered Automatic Speech Recognition Systems
   </a>
-  *Weifei Jin, Yuxin Cao, __Junjie Su__, Derui Wang, Yedi Zhang, Minhui Xue, Jie Hao, Jin Song Dong, Yixian Yang.*
-  In the 34th USENIX Security Symposium (USENIX Security), 2025.
+  *Weifei Jin, Yuxin Cao, __Junjie Su__, et al.* **USENIX Security 2025.**
 - <a href="https://ieeexplore.ieee.org/document/11209891" target="_blank">
   Boosting the Transferability of Audio Adversarial Examples with Acoustic Representation Optimization
   </a>
-  *Weifei Jin, __Junjie Su__, Hejia Wang, Yulin Ye, Jie Hao.*
-  In IEEE International Conference on Multimedia & Expo (ICME), 2025.
+  *Weifei Jin, __Junjie Su__, et al.* **ICME 2025.**
 - <a href="https://dl.acm.org/doi/10.1145/3665451.3665532" target="_blank">
   Towards Evaluating the Robustness of Automatic Speech Recognition Systems via Audio Style Transfer
   </a>
-  *Weifei Jin, Yuxin Cao, __Junjie Su__, Qi Shen, Kai Ye, Derui Wang, Jie Hao, Ziyao Liu.*
-  In the 2nd ACM Workshop on Secure and Trustworthy Deep Learning Systems (SecTL, AsiaCCS Workshop), 2024, pp. 47–55.
+  *Weifei Jin, Yuxin Cao, __Junjie Su__, et al.* **SecTL 2024.**
 
 Work Experience
 ===============
