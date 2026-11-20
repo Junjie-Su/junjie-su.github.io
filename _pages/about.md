@@ -34,20 +34,14 @@ News
 - **11/2024**: Won Second Prize at the [National Cryptography Technology Competition](https://www.cacrnet.org.cn/site/content/1564.html).
 - **04/2024**: Our paper on robustness of ASR systems was accepted to SecTL 2024 (AsiaCCS Workshop).
 
-Publications
-============
+Selected Papers
+===============
 
 - <a href="https://openreview.net/forum?id=pCRm6g0RnA" target="_blank">
   ALMGuard: Safety Shortcuts and Where to Find Them as Guardrails for Audio–Language Models
   </a>
   *Weifei Jin, Yuxin Cao, __Junjie Su__, Minhui Xue, Jie Hao, Ke Xu, Jin Song Dong, Derui Wang.*
   In the Thirty-ninth Annual Conference on Neural Information Processing Systems (NeurIPS), 2025.
-
-- <a href="https://arxiv.org/abs/2510.02158" target="_blank">
-  Mirage Fools the Ear, Mute Hides the Truth: Precise Targeted Adversarial Attacks on Polyphonic Sound Event Detection Systems
-  </a>
-  *__Junjie Su__, Weifei Jin, Yuxin Cao, Derui Wang, Kai Ye, Jie Hao.*
-  arXiv preprint, 2025.
 
 - <a href="https://www.usenix.org/conference/usenixsecurity25/presentation/jin-weifei" target="_blank">
   Whispering Under the Eaves: Protecting User Privacy Against Commercial and LLM-powered Automatic Speech Recognition Systems
