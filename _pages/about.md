@@ -9,30 +9,29 @@ redirect_from:
 ---
 I am an M.S. student in Intelligent Science and Technology at [Beijing University of Posts and Telecommunications (BUPT)](https://www.bupt.edu.cn/), where I also received my B.E. in Cyberspace Security (Experimental Class). My current work focuses on **Agent Harness**, **AI Infra**, and **Post-training**, with a particular emphasis on **AI cost and performance**. I also write on my <a href="https://momoyeyu.github.io" target="_blank" rel="noopener noreferrer">tech blog</a>.
 
-I joined [Prof. Jun Liu](https://teacher.bupt.edu.cn/liujun/zh_CN/index/64453/list/)'s group in Fall 2026. I am currently an R&D Intern at [Kimi](https://www.kimi.com/), working on Kimi Work Desktop and its core. Previously, I worked with [Prof. Jie Hao](https://scss.bupt.edu.cn/info/1063/3808.htm) on Audio Security and Adversarial Machine Learning, at [MiroFish](https://www.mirofish.ai) as an AI Intern & Head of Engineering, and at [ByteDance](https://www.bytedance.com/en/) as a Backend R&D Intern.
+I officially joined [Prof. Jun Liu](https://teacher.bupt.edu.cn/liujun/zh_CN/index/64453/list/)'s group in Fall 2026. I am currently an R&D Intern at [Kimi](https://www.kimi.com/), working on Kimi Work Desktop and its core. Previously, I worked with [Prof. Jie Hao](https://scss.bupt.edu.cn/info/1063/3808.htm) on Audio Security and Adversarial Machine Learning, at [MiroFish](https://www.mirofish.ai) as an AI Intern & Head of Engineering, and at [ByteDance](https://www.bytedance.com/en/) as a Backend R&D Intern.
 
 News
 ====
 
-- **11/2026**: Joined Kimi as an R&D Intern, working on Kimi Work Desktop and its core.
+- **11/2026**: Joined [Kimi](https://www.kimi.com/) as an R&D Intern.
 - **11/2026**: Became a Maintainer of [Archify](https://github.com/tt-a1i/archify).
 - **10/2026**: [MiroFish](https://github.com/666ghj/MiroFish) surpassed 80k GitHub stars.
-- **09/2026**: Started my M.S. studies at BUPT and joined [Prof. Jun Liu](https://teacher.bupt.edu.cn/liujun/zh_CN/index/64453/list/)'s group.
+- **10/2026**: [Archify](https://github.com/tt-a1i/archify) surpassed 80k GitHub stars.
+- **09/2026**: Started my M.S. studies at [BUPT](https://www.bupt.edu.cn/) and officially joined [Prof. Jun Liu](https://teacher.bupt.edu.cn/liujun/zh_CN/index/64453/list/)'s group.
 - **09/2026**: Started contributing to [Archify](https://github.com/tt-a1i/archify).
-- **09/2026**: [Archify](https://github.com/tt-a1i/archify) surpassed 50k GitHub stars.
 - **04/2026**: Awarded Outstanding Graduate of Beijing.
 - **01/2026**: Joined [MiroFish](https://www.mirofish.ai) as an AI Intern & Head of Engineering.
 - **11/2025**: Won Second Prize at the [Global Campus AI Algorithm Elite Competition](https://www.aicomp.cn/notice/notice-3/2846.html).
-- **10/2025**: We released a paper on adversarial attacks against polyphonic sound event detection systems on [arXiv](https://arxiv.org/abs/2510.02158).
-- **09/2025**: Admitted to BUPT M.S. program in Intelligent Science and Technology.
-- **09/2025**: Our paper on guardrails for audio-language models was accepted to NeurIPS 2025.
+- **09/2025**: Received an offer for [BUPT's M.S. program in Intelligent Science and Technology](https://www.bupt.edu.cn/).
+- **09/2025**: [ALMGuard](https://openreview.net/forum?id=pCRm6g0RnA) was accepted to NeurIPS 2025.
 - **08/2025**: Won First Prize at the [National College Students Information Security Contest](http://www.ciscn.cn/index.php/announcement/view/392).
-- **07/2025**: Joined ByteDance as Backend R&D Intern at TikTok-Servarch-Cost&Performance.
+- **07/2025**: Joined [ByteDance](https://www.bytedance.com/en/) as a Backend R&D Intern.
 - **04/2025**: Won Bronze Award at the [China International College Students' Innovation Competition](https://cy.ncss.cn/information/2c958332919840310196181825280051).
-- **03/2025**: Our paper on transferability of audio adversarial examples was accepted to ICME 2025.
-- **01/2025**: Our paper on speech privacy protection was accepted to USENIX Security 2025.
+- **03/2025**: [Boosting Audio Adversarial Transferability](https://ieeexplore.ieee.org/document/11209891) was accepted to ICME 2025.
+- **01/2025**: [Whispering Under the Eaves](https://www.usenix.org/conference/usenixsecurity25/presentation/jin-weifei) was accepted to USENIX Security 2025.
 - **11/2024**: Won Second Prize at the [National Cryptography Technology Competition](https://www.cacrnet.org.cn/site/content/1564.html).
-- **04/2024**: Our paper on robustness of ASR systems was accepted to SecTL 2024 (AsiaCCS Workshop).
+- **04/2024**: [Evaluating ASR Robustness via Audio Style Transfer](https://dl.acm.org/doi/10.1145/3665451.3665532) was accepted to SecTL 2024.
 
 Selected Papers
 ===============
