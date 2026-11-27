@@ -1,5 +1,10 @@
 - date: "11/2026"
   year: 2026
+  link_text: "Archify"
+  url: "https://github.com/tt-a1i/archify"
+  after: "surpassed 100k GitHub stars."
+- date: "11/2026"
+  year: 2026
   before: "Joined"
   link_text: "Kimi"
   url: "https://www.kimi.com/"
